@@ -10,5 +10,15 @@ function exponention(num, x) {
   }
 }
 
-const res = exponention(3, 3);
-console.log(res);
+//2. Создать функцию, которая вычисляет факторил числа
+function factorialOfNumber(number) {
+  if (!isNaN(number)) {
+    if (number > -1) {
+      let sum = 1;
+      for (let i = 1; i <= number; i++) {
+        sum *= i;
+      }
+      return sum;
+    }
+  }
+}
