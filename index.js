@@ -1,24 +1,35 @@
-//1. Создать функцию которая возводит заданное число в любую указанную степень
-function exponention(num, x) {
-  const result = num - x;
-  if (!isNaN(result)) {
-    let definedResult = 1;
-    for (let i = 1; i <= x; i++) {
-      definedResult *= num;
+//1. Создать функцию isAdult, которая будет проверять возраст пользователя на совершеннолетие:
+//isAdult(20); // true
+//isAdult(4); // false
+function isAdult1(age) {
+  if (!isNaN(age)) {
+    if (age >= 18) {
+      return true;
     }
-    return definedResult;
+    return false;
   }
 }
 
-//2. Создать функцию, которая вычисляет факторил числа
-function factorialOfNumber(number) {
-  if (!isNaN(number)) {
-    if (number > -1) {
-      let sum = 1;
-      for (let i = 1; i <= number; i++) {
-        sum *= i;
-      }
-      return sum;
+function isAdult2(age) {
+  !isNaN(age) & age >= 18 ? console.log(true) : console.log(false);
+}
+isAdult2(20);
+isAdult2(4);
+
+// 2. Создать функцию checkMultiplicity, которая принимает два числа и проверяет кратность первого вторым:
+function checkMultiplicity(num1, num2) {
+  const checkIsNumber = num1 - num2;
+  if (!isNaN(checkIsNumber)) {
+    if (num1 % num2 === 0) {
+      return true;
     }
+    return false
   }
 }
+console.log(checkMultiplicity(25, 5));// true 
+console.log(checkMultiplicity(15, 3));// true
+console.log(checkMultiplicity(15, 5));// true
+console.log(checkMultiplicity(15, 4));// false
+
+// 3. Проверка возможности треугольника. Создать функцию которая принимает длины треугольника;
+//  функция возвращает true если треугольник возможен и false если нет.
