@@ -46,3 +46,39 @@ function checkBuildTriangle(length1, length2, length3) {
 }
 console.log(checkBuildTriangle(2, 4, 4));
 
+//4. Написать функции расчета площадей (поверхности) следующих фигур/тел: ромб, цилиндр, треугольника, прямоугольника.
+function areaOfRhombus(diagonLength1, diagonalLength2) {
+  const res = diagonalLength2 - diagonalLength2;
+  if (!isNaN(res)) {
+    if (diagonLength1 > 0 & diagonalLength2 > 0) {
+      return diagonLength1 * diagonalLength2 / 2;
+    }
+  }
+}
+
+function areaOfCylinder(R, h) {
+  const isNum = R - h;
+  if (!isNaN(isNum)) {
+    if (R > 0 & h > 0) {
+      return (2 * 3, 14 * R * h) + (2 * 3, 14 * (R * R));
+    }
+  }
+}
+
+function areaOfARightTriangle(a, b) {
+  const isNum2 = a - b;
+  if (!isNaN(isNum2)) {
+    if (a > 0 & b > 0) {
+      return a * b / 2;
+    }
+  }
+}
+
+function areaOfARectangle(a, b) {
+  const isNum3 = a - b;
+  if (!isNaN(isNum3)) {
+    if (a > 0 & b > 0) {
+      return a * b;
+    }
+  }
+}
