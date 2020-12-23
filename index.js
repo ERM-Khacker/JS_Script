@@ -1,15 +1,14 @@
-const getSomeSquareRoot = function (a, b, c) {
-  const D = b * b - 4 * a * c;
-  if (D > 0) {
-    let x1, x2;
-    x1 = (-b + Math.sqrt(D)) / (2 * a);
-    x2 = (-b - Math.sqrt(D)) / (2 * a);
-    return "Уравнение имеет 2 корни: х1 = " + x1 + ", х2 = " + x2;
-  } else if (D === 0) {
-    let x;
-    x = (-b + D) / (2 * a);
-    return "Уравнение имеет 1 корень: х = " + x;
+//1. Создать функцию которая возводит заданное число в любую указанную степень
+function exponention(num, x) {
+  const result = num - x;
+  if (!isNaN(result)) {
+    let definedResult = 1;
+    for (let i = 1; i <= x; i++) {
+      definedResult *= num;
+    }
+    return definedResult;
   }
-  return "Дискриминант меньше нуля, а значит уравнение не имеет действительных корней!!!";
-};
-console.log(getSomeSquareRoot());
+}
+
+const res = exponention(3, 3);
+console.log(res);
