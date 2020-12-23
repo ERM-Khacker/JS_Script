@@ -33,3 +33,16 @@ console.log(checkMultiplicity(15, 4));// false
 
 // 3. Проверка возможности треугольника. Создать функцию которая принимает длины треугольника;
 //  функция возвращает true если треугольник возможен и false если нет.
+function checkBuildTriangle(length1, length2, length3) {
+  const result = length3 + length2 + length1;
+  if (!isNaN(result)) {
+    if (length1 < length2 + length3 & length1 > length2 - length3
+      & length2 < length1 + length3 & length2 > length1 - length3
+      & length3 < length1 + length2 & length3 > length1 - length2) {
+      return true;
+    }
+    return false;
+  }
+}
+console.log(checkBuildTriangle(2, 4, 4));
+
