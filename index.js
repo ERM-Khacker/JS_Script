@@ -48,7 +48,7 @@ console.log(checkBuildTriangle(2, 4, 4));
 
 //4. Написать функции расчета площадей (поверхности) следующих фигур/тел: ромб, цилиндр, треугольника, прямоугольника.
 function areaOfRhombus(diagonLength1, diagonalLength2) {
-  const res = diagonalLength2 - diagonalLength2;
+  const res = diagonalLength1 - diagonalLength2;
   if (!isNaN(res)) {
     if (diagonLength1 > 0 & diagonalLength2 > 0) {
       return diagonLength1 * diagonalLength2 / 2;
